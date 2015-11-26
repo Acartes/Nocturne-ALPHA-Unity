@@ -9,7 +9,7 @@ public class controller : MonoBehaviour {
     void Update() {
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded) {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = new Vector3(Input.GetAxis("Horizontal") / 8, 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
             if (Input.GetButton("Jump"))
