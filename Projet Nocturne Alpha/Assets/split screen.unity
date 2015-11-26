@@ -366,7 +366,7 @@ Transform:
   - {fileID: 511991422}
   - {fileID: 1041470676}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &55092401
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +873,7 @@ Transform:
   m_LocalScale: {x: 10.4251299, y: 1, z: 14.7954636}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &179838247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ GameObject:
   - 114: {fileID: 414920543}
   m_Layer: 0
   m_Name: Akbar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2353,12 +2353,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 414920541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 112dd985394d1cd4c913d61899585375, type: 3}
+  m_Script: {fileID: 11500000, guid: f46ea7baa300d364ca87462fb846d034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 8
-  gravity: 20
+  swimming: 0
+  moveStatus: idle
 --- !u!23 &414920545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2413,10 +2412,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .503000021, z: 0}
   m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
-  m_Children:
-  - {fileID: 1114745617}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &441285302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,7 +4615,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &852400272
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5537,7 @@ Transform:
   m_Children:
   - {fileID: 1788024660}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1033065834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6268,6 +6266,7 @@ GameObject:
   - 92: {fileID: 1114745615}
   - 124: {fileID: 1114745614}
   - 81: {fileID: 1114745613}
+  - 114: {fileID: 1114745618}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6337,11 +6336,41 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1114745612}
   m_LocalRotation: {x: .125084117, y: 0, z: 0, w: .992146194}
-  m_LocalPosition: {x: 0, y: 3.64000058, z: -5.80000019}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.95900023, z: -2.32000017}
+  m_LocalScale: {x: .400000006, y: .400000006, z: .400000036}
   m_Children: []
-  m_Father: {fileID: 414920548}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1114745618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114745612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fed9a4305227764d8f0eb01ef4df88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 414920541}
+  targetHeight: 1.70000005
+  distance: 3
+  offsetFromWall: .100000001
+  maxDistance: 20
+  minDistance: .600000024
+  xSpeed: 200
+  ySpeed: 200
+  yMinLimit: -80
+  yMaxLimit: 80
+  zoomRate: 40
+  rotationDampening: 10
+  zoomDampening: 5
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 4294967293
+  lockToRearOfTarget: 0
+  allowMouseInputX: 0
+  allowMouseInputY: 1
 --- !u!1 &1149053984
 GameObject:
   m_ObjectHideFlags: 0
@@ -7554,7 +7583,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1341647981
 GameObject:
   m_ObjectHideFlags: 0
