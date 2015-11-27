@@ -5,7 +5,7 @@ public class EnemyMovement : MonoBehaviour {
 
     Transform player;
     NavMeshAgent nav;
-    bool playerInRange;
+    bool playerInSight;
 
     void Awake ()
     {
@@ -17,13 +17,13 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerInRange = true;
+            playerInSight = true;
         }
     }
 
     void Update ()
     {
-        if (playerInRange)
+        if (playerInSight)
         {
         nav.SetDestination(player.position);
         }
