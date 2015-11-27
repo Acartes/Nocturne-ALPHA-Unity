@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Akbar_Controller.cs" />
      <Compile Include="Assets\Scripts\CameraControllercs.cs" />
      <Compile Include="Assets\Scripts\CharacterControllercs.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\controller.cs" />
      <Compile Include="Assets\Scripts\controller1.cs" />
      <Compile Include="Assets\Scripts\pushing.cs" />
