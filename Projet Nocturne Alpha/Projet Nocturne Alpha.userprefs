@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraControllercs.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Akbar_Controller.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraControllercs.cs" Line="192" Column="2" />
+      <File FileName="Assets\Scripts\Akbar_Controller.cs" Line="10" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
