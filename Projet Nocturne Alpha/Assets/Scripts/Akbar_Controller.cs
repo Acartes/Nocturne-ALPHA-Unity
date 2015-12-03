@@ -4,7 +4,6 @@ using System.Collections;
 public class Akbar_Controller : MonoBehaviour {
 
 	private int speed = 10;
-	private Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
