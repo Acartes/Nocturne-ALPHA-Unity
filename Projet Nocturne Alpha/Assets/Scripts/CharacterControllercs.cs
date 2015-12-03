@@ -29,6 +29,10 @@ public class CharacterControllercs : MonoBehaviour {
     private float coolDown = 0.5f;                   //Cooldowntime for SideButtons 
     private CharacterController controller;          //CharacterController for movement 
      
+
+	void Start(){
+	}
+
     //Every Frame 
     void Update () 
     { 
@@ -48,7 +52,7 @@ public class CharacterControllercs : MonoBehaviour {
              
             //pushbuffer to avoid on/off flipping 
             if(pbuffer>0) 
-                pbuffer -=Time.deltaTime; 
+                pbuffer -=Time.deltaTime;
             if(pbuffer<0)pbuffer=0; 
                             
             //Automove Sidebuttonmovement 

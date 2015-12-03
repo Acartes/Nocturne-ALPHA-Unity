@@ -123,6 +123,7 @@ public class CameraControllercs : MonoBehaviour {
 		
 		// If there was a collision, correct the camera position and calculate the corrected distance
 		var isCorrected = false;
+		
 		if (Physics.Linecast (trueTargetPosition, position, out collisionHit, collisionLayers))
 		{
 			// Calculate the distance from the original estimated position to the collision location,
@@ -147,8 +148,17 @@ public class CameraControllercs : MonoBehaviour {
 		//Finally Set rotation and position of camera
 		
 		if (isCorrected == true) {
-			transform.rotation = rotation * Quaternion.Euler (15 / Vector3.Distance (trueTargetPosition, collisionHit.point), 0, 0);
-			transform.position = position + new Vector3 (0, 0.2f / (Vector3.Distance (trueTargetPosition, collisionHit.point)) * 10, (Vector3.Distance (trueTargetPosition, collisionHit.point)) / (target.transform.position.z));
+			float ModifRotate = 15 / Vector3.Distance (trueTargetPosition, collisionHit.point) - 5f;
+//			transform.rotation = rotation;
+
+			if (ModifRotate > 45f)
+				ModifRotate = 45f;
+
+			//rotation de la caméra
+			transform.rotation = rotation * Quaternion.Euler (ModifRotate, 0, 0);
+
+//			transform.position = position + new Vector3 (0, 0, 0);
+			transform.position = position + new Vector3 (0, 0.2f / (Vector3.Distance (trueTargetPosition, collisionHit.point)) * 1.2f,0);
 		} else {
 			transform.rotation = rotation;
 			transform.position = position;
